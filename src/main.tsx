@@ -1,9 +1,10 @@
-import ReactDOM from "react-dom/client";
-import ChatWidget from "./ChatWidget";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
 
-const rootId = "chat-widget-root";
-const rootElem = document.getElementById(rootId);
-
-if (rootElem) {
-  ReactDOM.createRoot(rootElem).render(<ChatWidget />);
-}
+createRoot(document.getElementById("chat-widget-root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
