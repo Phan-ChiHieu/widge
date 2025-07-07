@@ -10,6 +10,7 @@ export default defineConfig({
       hook: "writeBundle",
     }),
   ],
+  base: process.env.STATIC_BASE_URL || "/",
   build: {
     lib: {
       entry: "./src/main.tsx",
